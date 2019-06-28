@@ -59,6 +59,34 @@ html(lang="ru")
                 polygon(fill="f8f7fc" points="0,0 100,0 50,70")
 
         section.skills
+          .container
+            .skills__wrap
+              .skills__top
+                h2.skills__title Чем я могу быть полезен вам
+                p.skills__subtitle.section__descr Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+              .skills__bottom
+                .skills__img
+                  +image('backpack.png','skills__backpack','Рюкзак')
+                .skills__cycles
+                  ul.cycles
+                    -
+                      var cycles = [
+                        ['Front-end', [['HTML5','-70s'],['CSS3','-60s'],['Javascript','-40s'],['Jquery и Vue.js','-45s']]],
+                        ['Workflow', [['GIT','-30s'],['Terminal','-20s'],['Gulp','-15s'],['Webpack','-10s']]]
+                      ]
+                    each item in cycles
+                      li.cycles__item
+                        h3.cycles__title #{item[0]}
+                        ul.cycles__list
+                          each metric in item[1]
+                            li.cycles__list-item
+                              svg(viewBox="0 0 150 150" preserveAspectRatio="none").cycles__list-shape
+                                circle( r="65" cx="75" cy="75" ).cycles__circle.cycles__circle_before
+                                circle( stroke="#5500f2" width="100%" height="100%" r="65" cx="75" cy="75" style=`animation-delay: ${metric[1]} `).cycles__circle.cycles__circle_after
+                                linearGradient(id="status")
+                                  stop(offset="0%" stop-color="#0089f2")
+                                  stop(offset="100%" stop-color="#003dea")
+                                .cycles__list-title #{metric[0]}
 
         footer.footer
           .container

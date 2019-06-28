@@ -4,12 +4,14 @@
     font-weight: 700;
     color: $text-color;
     &_light {
-      color: $sub-text-color;
+      color: $text-color;
+      opacity: 0.5;
     }
   }
   &__descr {
     font-weight: 600;
     font-size: 16px;
+    color: $text-color;
     opacity: 0.5;
   }
 }
@@ -70,7 +72,7 @@
     &:hover .socials__icon,
     &:focus .socials__icon {
       transition: 0.3s;
-      fill: #008bff;
+      fill: $hover-text-color;
     }
     &:active .socials__icon {
       transition: 0.3s;
@@ -80,7 +82,7 @@
   &__icon {
     width: 25px;
     height: 25px;
-    fill: #524c5d;
+    fill: $text-color;
     transition: 0.3s;
   }
 }
