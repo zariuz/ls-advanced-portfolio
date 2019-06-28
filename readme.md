@@ -1,10 +1,8 @@
 # Учебный шаблон проекта Portfolio
 
-| ФИО                     | Нечетов Евгений Петрович       |
-| ----------------------- | ------------------------------ |
-| Номер домашнего задания | ДЗ 1                           |
-| Ссылка на репозиторий   | http://github.com/kovaldn/site |
-| Ссылка на рабочий сайт  | http://site.ru                 |
+| ФИО                   | Нечетов Евгений Петрович                        |
+| --------------------- | ----------------------------------------------- |
+| Ссылка на репозиторий | https://github.com/zariuz/ls-advanced-portfolio |
 
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же
 > [последняя версия Yarn](https://yarnpkg.com/ru/docs/install)
@@ -12,7 +10,7 @@
 ## Чтобы развернуть проект необходимо:
 
 ```sh
-$ git clone git@github.com:loftschool/ls-advanced-portfolio.git
+$ git clone https://github.com/zariuz/ls-advanced-portfolio.git
 $ cd ls-advanced-portfolio
 $ yarn
 ```
