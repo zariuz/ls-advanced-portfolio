@@ -1,0 +1,72 @@
+.slider-feedback {
+  display: flex;
+  justify-content: space-between;
+  &__nav {
+    display: flex;
+    align-items: center;
+    color: $text-color;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid $text-color;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__child {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 45%;
+    padding-left: 100px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 75px;
+      height: 63px;
+      background: url('../images/content/quote.png') center no-repeat;
+    }
+  }
+  &__quote {
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.5;
+    color: $text-color;
+  }
+  &__info {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    &-text {
+      display: flex;
+      flex-direction: column;
+    }
+    &-avatar {
+      margin-right: 30px;
+    }
+    &-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: $text-color;
+    }
+    &-post {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      opacity: 0.3;
+      color: $text-color;
+    }
+  }
+  &__image {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+  }
+}

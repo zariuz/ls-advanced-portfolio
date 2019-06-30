@@ -103,7 +103,7 @@ html(lang="ru")
                       .slider-work__main
                         +image(`${item[0]}.jpg`,'slider-work__img',`${item[1]}`)
                         - for (var i = 0; i < works.length; i++)
-                          .slider-work__main-number= i+1
+                          .slider-work__main-number= i+4
                       .slider-work__status
                         button.slider-work__status-child.slider-work__status-child_active
                           +image(`${item[0]}.jpg`,'slider-work__preview',`${item[1]}`)
@@ -130,8 +130,61 @@ html(lang="ru")
 
         .triangle__portfolio
           .triangle
-            svg.triangle__child(viewBox="0 0 100 100" preserveAspectRatio="none")
+            svg.triangle__child-down(viewBox="0 0 100 100" preserveAspectRatio="none")
               polygon(fill="f8f7fc" points="0,0 100,0 50,70")
+
+        .end-section
+          .end-section__up            
+            section.feedback
+              .container 
+                .feedback__wrap
+                  .feedback__top
+                    h2.feedback__title.section__title Что обо мне говорят
+                    .slider-feedback__nav
+                      button.slider__button.slider-feedback__button.slider-feedback__button-prev <
+                      button.slider__button.slider-feedback__button.slider-feedback__button-next >
+                  .feedback__slider
+                    .slider-feedback
+                      -
+                        var feedback = [
+                          ['Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!','Dima.png','Ковальчук Дмитрий','Основатель Loftschool'],
+                          ['Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах','Vova.png','Владимир Сабанцев','Преподаватель']
+                        ]
+                      each item in feedback
+                        .slider-feedback__child
+                          p.slider-feedback__quote #{item[0]}
+                          .slider-feedback__info
+                            .slider-feedback__info-avatar
+                              +image(`${item[1]}`,'slider-feedback__image',`Фото: ${item[1]}`)
+                            .slider-feedback__info-text
+                              span.slider-feedback__info-name #{item[2]}
+                              span.slider-feedback__info-post #{item[3]}
+          
+          .end-section__down
+            section.contacts
+              .container
+                .contacts__wrap
+                  h2.contacts-title.section__title.section__title_light Связаться со мной
+                  .contacts__form
+                    form.form
+                      .form__wrap
+                        .form__child
+                          label(for="fullname").input__label Введите ваше имя
+                          .form__input
+                            input(type="text" id="fullname" name="fullname" required).input
+                            +icon('user','form__input-icon')
+                        .form__child 
+                          label(for="email").input__label Введите ваше имя
+                          .form__input
+                            input(type="text" id="email" name="email" required).input
+                            +icon('envelope','form__input-icon')
+                        .form__child.form__child_full
+                          label(for="message").input__label Сообщение к письму
+                          .form__input
+                            textarea(type="text" id="message" name="message").input.textarea 
+                            +icon('message','form__input-icon')
+                      .form__btn
+                        input(type="submit" value="Отправить").btn
 
 
         footer.footer
