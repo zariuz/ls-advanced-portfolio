@@ -22,19 +22,21 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex-basis: 45%;
     padding-left: 100px;
     &:before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       width: 75px;
       height: 63px;
-      background: url('../images/content/quote.png') center no-repeat;
+      background: url("../images/content/quote.png") center no-repeat;
     }
   }
   &__quote {
+    padding-bottom: 20px;
     font-size: 16px;
     font-weight: 700;
     opacity: 0.5;

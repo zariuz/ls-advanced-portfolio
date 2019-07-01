@@ -114,7 +114,7 @@ html(lang="ru")
                         button.slider-work__status-child
                           +image(`work-4.jpg`,'slider-work__preview',`${item[1]}`)
                         .slider-work__nav
-                          button.slider__button.slider__button_disabled.slider-work__button.status-work__button-prev.slider-work__button_disabled <
+                          button.slider__button.slider-work__button.status-work__button-prev <
                           button.slider__button.slider-work__button.status-work__button-next >
                     .slider-work__right
                       .slider-work__info
@@ -164,24 +164,24 @@ html(lang="ru")
             section.contacts
               .container
                 .contacts__wrap
-                  h2.contacts-title.section__title.section__title_light Связаться со мной
+                  h2.contacts-title.section__title Связаться со мной
                   .contacts__form
                     form.form
                       .form__wrap
                         .form__child
                           label(for="fullname").input__label Введите ваше имя
                           .form__input
-                            input(type="text" id="fullname" name="fullname" required).input
+                            input(type="text" id="fullname" name="fullname" required placeholder="Евгений Нечетов").input
                             +icon('user','form__input-icon')
                         .form__child 
                           label(for="email").input__label Введите ваше имя
                           .form__input
-                            input(type="text" id="email" name="email" required).input
+                            input(type="text" id="email" name="email" required placeholder="nechetov@hotmail.com").input
                             +icon('envelope','form__input-icon')
                         .form__child.form__child_full
                           label(for="message").input__label Сообщение к письму
                           .form__input
-                            textarea(type="text" id="message" name="message").input.textarea 
+                            textarea(type="text" id="message" name="message" placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса").input.textarea 
                             +icon('message','form__input-icon')
                       .form__btn
                         input(type="submit" value="Отправить").btn
@@ -193,7 +193,7 @@ html(lang="ru")
               .footer__left
                 span.footer__copyright © 2019
                 .footer__author
-                  h3.footer__author-name Евгений Нечетов
+                  h3.footer__author-name Евгений <br> Нечетов
                   span.footer__author-project Личный сайт <br> веб-разработчика
               .footer__right
                 .footer__nav

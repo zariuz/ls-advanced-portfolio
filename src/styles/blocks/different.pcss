@@ -29,7 +29,7 @@
 }
 .end-section {
   position: relative;
-  padding: 240px 0;
+  padding: 140px 0;
   z-index: 1;
   &__child {
     &:not(:first-child) {
@@ -37,7 +37,7 @@
     }
   }
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -46,6 +46,9 @@
     max-width: 100%;
     height: 100%;
     z-index: -1;
+  }
+  &__up {
+    margin-bottom: 180px;
   }
 }
 .logo {
@@ -216,7 +219,7 @@
   align-items: center;
   width: 100%;
   height: 80px;
-  border-radius: 40px 80px;
+  border-radius: 40px 5px;
   border: none;
   background: $hover-text-color;
   font-size: 18px;
@@ -237,10 +240,7 @@
 }
 .slider__button {
   transition: 0.3s;
-  color: $text-color;
-  &_disabled {
-    color: #6c7683;
-  }
+  color: #6c7683;
   &:not(.slider__button_disabled):hover,
   &:not(.slider__button_disabled):focus {
     transition: 0.3s;
