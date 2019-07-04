@@ -24,8 +24,16 @@ body {
   margin: 0 auto;
   max-width: 1480px;
   width: 95%;
-  // width: 1490px;
 
+  @include desktopHd {
+    max-width: 1080px;
+  }
+  @include desktop {
+    max-width: 690px;
+  }
+  @include tablets {
+    width: 85%;
+  }
   @include phones {
     width: 85%;
   }
