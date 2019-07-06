@@ -97,4 +97,20 @@
   &__icon {
     display: flex;
   }
+  &__mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  &__nav-bar {
+    display: none;
+    @include desktop {
+      display: block;
+      margin-left: 93px;
+    }
+  }
+  &__socials {
+    @include phones {
+      display: none;
+    }
+  }
 }
