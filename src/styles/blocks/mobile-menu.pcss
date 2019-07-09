@@ -35,13 +35,13 @@
     right: 0px;
   }
   &__nav {
-    & .nav {
+    .nav {
       color: $text-color;
       font-size: 18px;
       &__list {
         flex-direction: column;
       }
-      &__child {
+      &__item {
         &:not(:first-child) {
           margin-top: 23px;
         }
@@ -55,4 +55,7 @@
     margin-top: 55px;
     color: $text-color;
   }
+}
+.nav-bar {
+  cursor: pointer;
 }

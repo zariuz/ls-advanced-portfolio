@@ -1,16 +1,37 @@
 .slider-work {
   display: flex;
+  @include desktop {
+    flex-direction: column;
+  }
   &__left {
     position: relative;
     flex-basis: 68%;
     margin-right: 160px;
+    @include desktop {
+      flex-basis: 100%;
+      margin-right: 60px;
+    }
+    @include tablets {
+      margin-right: 0px;
+    }
   }
   &__right {
     flex-basis: 24%;
+    @include desktop {
+      margin-top: 57px;
+      flex-basis: 100%;
+      text-align: center;
+    }
+    @include tablets {
+      text-align: left;
+    }
   }
   &__main {
     position: relative;
     z-index: 1;
+    @include tablets {
+      height: auto;
+    }
     &-number {
       position: absolute;
       display: flex;
@@ -38,7 +59,7 @@
       width: 140px;
       position: relative;
       &:hover:after {
-        content: '';
+        content: "";
         top: 0;
         left: 0;
         position: absolute;
@@ -109,11 +130,18 @@
     font-weight: 700;
     color: #4b6fd7;
     text-decoration: none;
+    @include desktop {
+      display: flex;
+      justify-content: center;
+    }
+    @include tablets {
+      justify-content: flex-start;
+    }
     &-title {
       position: relative;
       transition: 0.3s;
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -1px;
         left: 0;
