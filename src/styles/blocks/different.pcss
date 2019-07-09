@@ -245,6 +245,9 @@
       opacity: 0.5;
       width: 30px;
       height: 30px;
+      &:hover {
+        fill: $hover-text-color;
+      }
     }
   }
   &__btn {
@@ -296,6 +299,9 @@
 .slider__button {
   transition: 0.3s;
   color: $slider-button-color;
+  &:hover {
+    color: $white-color;
+  }
   &:not(.slider__button_disabled):hover,
   &:not(.slider__button_disabled):focus {
     transition: 0.3s;

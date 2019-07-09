@@ -1,3 +1,6 @@
+.slider-work__status {
+}
+
 .slider-work {
   display: flex;
   @include desktop {
@@ -45,19 +48,41 @@
       font-weight: 700;
       color: #f0f0f0;
       z-index: -1;
+      @include desktopHd {
+        right: -120px;
+        font-size: 300px;
+        line-height: 200px;
+      }
+      @include tablets {
+        display: none;
+      }
     }
   }
   &__status {
     position: absolute;
-    bottom: 56px;
+    bottom: 51px;
     right: 0;
     display: flex;
     flex-direction: column-reverse;
     height: 100px;
     z-index: 2;
+    @include desktop {
+      bottom: 0;
+    }
     &-child {
       width: 140px;
       position: relative;
+      &:nth-child(n + 5) {
+        display: none;
+      }
+      @include desktopHd {
+        &:nth-child(n + 4) {
+          display: none;
+        }
+      }
+      @include tablets {
+        display: none;
+      }
       &:hover:after {
         content: "";
         top: 0;
@@ -79,6 +104,9 @@
     display: flex;
     flex-direction: row;
     color: $white-color;
+    @include tablets {
+      top: 50px;
+    }
   }
   &__button {
     display: flex;
@@ -91,6 +119,13 @@
   }
   &__tool {
     display: flex;
+    @include desktop {
+      justify-content: center;
+    }
+    @include tablets {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
     &-child {
       padding: 12px 16px;
       border-radius: 23px;
@@ -101,6 +136,9 @@
       background-color: #ebeff3;
       &:not(:last-child) {
         margin-right: 24px;
+        @include tablets {
+          margin-right: 15px;
+        }
       }
     }
   }
@@ -113,12 +151,32 @@
       line-height: 46px;
       font-weight: 700;
       color: #2d3c4e;
+      @include desktopHd {
+        margin-top: 35px;
+      }
+      @include desktop {
+        margin-top: 17px;
+      }
+      @include tablets {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 13px;
+      }
     }
     &-descr {
       margin-top: 33px;
       color: #2b3948;
       line-height: 30px;
       opacity: 0.7;
+      @include desktop {
+        width: 65%;
+        margin: 0 auto;
+        margin-top: 15px;
+        line-height: 25px;
+      }
+      @include tablets {
+        width: 100%;
+      }
     }
   }
   &__link {
@@ -140,6 +198,9 @@
     &-title {
       position: relative;
       transition: 0.3s;
+      @include desktop {
+        font-size: 14px;
+      }
       &:after {
         content: "";
         position: absolute;

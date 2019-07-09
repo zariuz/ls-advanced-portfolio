@@ -164,4 +164,34 @@
       }
     }
   }
+  &__nav {
+    .nav__list {
+      flex-wrap: wrap;
+    }
+    .nav__item {
+      @include desktop {
+        &:nth-child(4) {
+          margin: 0;
+        }
+        &:nth-child(n + 5) {
+          margin-top: 23px;
+        }
+      }
+      @include tablets {
+        flex-basis: 50%;
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+        &:nth-child(n + 5) {
+          margin-top: 0px;
+        }
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        &:nth-child(n + 3) {
+          margin-top: 22px;
+        }
+      }
+    }
+  }
 }
