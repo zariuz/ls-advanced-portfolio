@@ -1,3 +1,14 @@
+section.skills
+  .container
+    .skills__wrap
+      .skills__top
+        h2.skills__title Чем я могу быть полезен вам
+        p.skills__subtitle.section__descr Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .skills__bottom
+        .skills__img
+          +image('backpack.png','skills__backpack','Рюкзак')
+        #skills-component
+
 script(type="text/x-template")#skills-list
   .skills__metrics
     ul.metrics
@@ -27,6 +38,6 @@ script(type="text/x-template")#skill
       circle( r="65" cx="80" cy="80" ).metrics__circle.metrics__circle_before
       circle( stroke="url(#status)" width="100%" height="100%" r="65" cx="80" cy="80" ref="color-circle").metrics__circle.metrics__circle_after
       linearGradient(id="status")
-        stop(offset="0%" stop-color="#0000ff")
-        stop(offset="100%" stop-color="#5500f2")
+        stop(offset="0%" stop-color="#5500f2")
+        stop(offset="100%" stop-color="#8f00ef")
     .metrics__list-title {{skillName}}

@@ -1,0 +1,46 @@
+.main-section
+  header.header
+    .container
+      .header__wrap.fullscreen-section
+        .header__top
+          .header__logo
+            span.logo ЕН
+          .header__nav 
+            +nav('nav', ["Главная","Обо мне", "Навыки", "Работы", "Отзывы", "Связаться"])
+          .header__mobile-menu
+            .header__socials
+              +socials('socials')
+          .header__nav-bar
+            .nav-bar#burger-btn
+              span.nav-bar__child
+        .header__middle
+          h1.header__title Евгений <br> Нечетов
+          span.header__subtitle Личный сайт <br> веб-разработчика
+        .header__bottom
+          button.header__button
+            span.header__prompt Скролл
+            +icon('scroll','header__scroll')
+  
+  section.about
+    .container
+      .about__wrap
+        .about__grid
+          .about__child.about__child_first.about__avatar
+            +image( 'me.jpg', 'avatar','Моя фотография)')
+          .about__child.about__child_second.about__content
+            span.section__descr.about__descr Привет, меня зовут
+            h2.about__title Евгений Нечетов
+            p.section__descr.about__descr Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+          .about__child.about__child_third.about__info
+            table.about__table
+              -
+                var info = [
+                  ['Проживаю:','Санкт-Петербург'],
+                  ['Возраст:','37'],
+                  ['Родился:','24 сентября 1981']
+                ]
+              each row in info
+                tr.about__row
+                  td.about__cell.about__cell_light  #{row[0]}
+                  td.about__cell.about__cell_bold  #{row[1]}
+          p.about__child.about__child_fourth.about__prompt.section__descr Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
