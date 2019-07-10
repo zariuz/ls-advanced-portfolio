@@ -1,22 +1,26 @@
 .end-section
   .end-section__up            
-    section.feedback
+    section.feedback#feedback
       .container 
         .feedback__wrap
           .feedback__top
             h2.feedback__title.section__title Что обо мне говорят
             .slider-feedback__nav
-              button.slider__button.slider-feedback__button.slider-feedback__button-prev <
-              button.slider__button.slider-feedback__button.slider-feedback__button-next >
+              button(@click="previous()").slider__button.slider-feedback__button.slider-feedback__button-prev <
+              button(@click="next()").slider__button.slider-feedback__button.slider-feedback__button-next >
           .feedback__slider
-            .slider-feedback
+            flickity(ref="flickity" :options="flickityOptions").slider-feedback
               -
                 var feedback = [
+                  ['Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!','Dima.png','Ковальчук Дмитрий','Основатель Loftschool'],
+                  ['Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах','Vova.png','Владимир Сабанцев','Преподаватель'],
+                  ['Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!','Dima.png','Ковальчук Дмитрий','Основатель Loftschool'],
+                  ['Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах','Vova.png','Владимир Сабанцев','Преподаватель'],
                   ['Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!','Dima.png','Ковальчук Дмитрий','Основатель Loftschool'],
                   ['Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах','Vova.png','Владимир Сабанцев','Преподаватель']
                 ]
               each item in feedback
-                .slider-feedback__child
+                .slider-feedback__child.carousel-cell
                   p.slider-feedback__quote #{item[0]}
                   .slider-feedback__info
                     .slider-feedback__info-avatar
