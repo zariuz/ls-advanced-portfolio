@@ -60,22 +60,26 @@
   }
   &__status {
     position: absolute;
-    bottom: 51px;
+    bottom: 0;
     right: 0;
     display: flex;
     flex-direction: column-reverse;
     height: 100px;
     z-index: 2;
+    @include desktopHd {
+      bottom: 50px;
+    }
     @include desktop {
       bottom: 0;
     }
     &-child {
-      width: 140px;
+      width: 180px;
       position: relative;
       &:nth-child(n + 5) {
         display: none;
       }
       @include desktopHd {
+        width: 140px;
         &:nth-child(n + 4) {
           display: none;
         }
