@@ -26,8 +26,9 @@
   position: relative;
   background-size: cover;
   @include tablets {
-    background: $background-color url(../images/content/mountain.jpg) 70% 45%
+    background: $background-color url(../images/content/mountain.jpg) 65% 35%
       no-repeat;
+    background-size: 400%;
   }
 }
 .end-section {
@@ -64,13 +65,16 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: url(../images/content/Budda.jpg) 37% bottom no-repeat;
     width: 2800px;
     max-width: 100%;
     height: 100%;
+    background: url(../images/content/Budda.jpg) 37% bottom no-repeat;
     z-index: -1;
     @include desktop {
       background-position: 45% center;
+    }
+    @include tablets {
+      background: url(../images/content/Budda.jpg) 37% bottom no-repeat;
     }
   }
   &__up {
