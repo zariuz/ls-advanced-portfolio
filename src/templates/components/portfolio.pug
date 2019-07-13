@@ -3,37 +3,5 @@ section.portfolio
     .portfolio__wrap
       span.portfolio__title.section__title Мои работы
       .portfolio__slider
-        .slider-work
-          -
-            var works = [
-              ['work-1','Сайт школы образования',['HTML','CSS','Javasript'],'Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!','https://loftschool.com']
-            ]
-          each item in works
-            .slider-work__left
-              .slider-work__main
-                +image(`${item[0]}.jpg`,'slider-work__img',`${item[1]}`)
-                - for (var i = 0; i < works.length; i++)
-                  .slider-work__main-number= i+4
-              .slider-work__status
-                button.slider-work__status-child.slider-work__status-child_active
-                  +image(`${item[0]}.jpg`,'slider-work__preview',`${item[1]}`)
-                button.slider-work__status-child
-                  +image(`work-2.jpg`,'slider-work__preview',`${item[1]}`)
-                button.slider-work__status-child
-                  +image(`work-3.jpg`,'slider-work__preview',`${item[1]}`)
-                button.slider-work__status-child
-                  +image(`work-4.jpg`,'slider-work__preview',`${item[1]}`)
-                .slider-work__nav
-                  button.slider__button.slider-work__button.status-work__button-prev <
-                  button.slider__button.slider-work__button.status-work__button-next >
-            .slider-work__right
-              .slider-work__info
-                .slider-work__tool
-                  each tool in item[2]
-                    span.slider-work__tool-child #{tool}
-                span.slider-work__info-title #{item[1]}
-                p.slider-work__info-descr.section__descr #{item[3]}
-                .slider-work__link
-                  a(href=`${item[4]}` target="_blank").slider-work__link-icon
-                    +icon(`link`,'link-icon')
-                  a(href=`${item[4]}` target="_blank").slider-work__link-title Посмотреть сайт
+        #slider-component
+        
