@@ -1,11 +1,11 @@
-import Vue from 'vue';
+import Vue from "vue";
 
 const btns = {
-  template: '#slider-btns'
+  template: "#slider-btns"
 };
 
 const thumbs = {
-  template: '#slider-thumbs',
+  template: "#slider-thumbs",
   components: {
     btns
   },
@@ -21,7 +21,7 @@ const thumbs = {
 };
 
 const display = {
-  template: '#slider-display',
+  template: "#slider-display",
   components: {
     thumbs
   },
@@ -33,14 +33,14 @@ const display = {
 };
 
 const tags = {
-  template: '#slider-tags',
+  template: "#slider-tags",
   props: {
     tagsArray: Array
   }
 };
 
 const info = {
-  template: '#slider-info',
+  template: "#slider-info",
   components: {
     tags
   },
@@ -49,14 +49,14 @@ const info = {
   },
   computed: {
     tagsArray() {
-      return this.currentWork.skills.split(',');
+      return this.currentWork.skills.split(",");
     }
   }
 };
 
 new Vue({
-  el: '#slider-component',
-  template: '#slider-container',
+  template: "#slider-container",
+  el: "#slider-component",
   components: {
     display,
     info
@@ -93,17 +93,17 @@ new Vue({
     },
     handleSlide(direction) {
       switch (direction) {
-        case 'next':
+        case "next":
           this.currentIndex++;
           break;
-        case 'prev':
+        case "prev":
           this.currentIndex--;
           break;
       }
     }
   },
   created() {
-    const data = require('../data/works.json');
+    const data = require("../data/works.json");
     this.works = this.makeArrWithRequiredImages(data);
   }
 });
