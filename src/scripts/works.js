@@ -12,12 +12,12 @@ const thumbs = {
   props: {
     works: Array,
     currentWork: Object
+  },
+  computed: {
+    active() {
+      this.works;
+    }
   }
-  // computed: {
-  //   active() {
-  //     this.works
-  //   }
-  // }
 };
 
 const display = {
