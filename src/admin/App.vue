@@ -423,7 +423,8 @@ export default {
   },
   components: {
     appInput: () => import("./templates/input")
-  }
+  },
+  methods: {}
 };
 </script>
 
