@@ -377,7 +377,7 @@
             button.close
           h1.login__title Авторизация
           .login__form
-            form.form(@submit.prevent="login" novalidate)
+            form.form(@submit.prevent="sendForm")
               app-input(
                 title="Логин"
                 icon="login"
@@ -395,12 +395,12 @@
               .login__btn
                 input.btn.btn__login(
                   type='submit'
-                  :disabled="disableSubmit"
                 )    
 </template>
 
 <script>
 import { Validator } from "simple-vue-validator";
+import regeneratorRuntime from "regenerator-runtime";
 import axios from "axios";
 export default {
   mixins: [require("simple-vue-validator").mixin],
@@ -414,7 +414,6 @@ export default {
   },
   data() {
     return {
-      disableSubmit: false,
       user: {
         name: "",
         password: ""
@@ -424,7 +423,15 @@ export default {
   components: {
     appInput: () => import("./templates/input")
   },
-  methods: {}
+  methods: {
+    async sendForm() {
+      const success = await this.$validate();
+      console.log("success", success);
+      if (success) {
+        // send form
+      }
+    }
+  }
 };
 </script>
 

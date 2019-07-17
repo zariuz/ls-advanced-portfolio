@@ -9,8 +9,8 @@ export default {
   props: {
     errorText: {
       type: String,
-      default: "Осечка(ты гречка)"
+      default: "Что то пошло не так"
     }
   }
-}
+};
 </script>
