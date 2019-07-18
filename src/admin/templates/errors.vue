@@ -1,4 +1,3 @@
-
 <template lang="pug">
   .form__error
     span {{errorText}}

@@ -405,10 +405,10 @@ import axios from "axios";
 export default {
   validators: {
     "user.name": value => {
-      return Validator.value(value).required("Введите имя пользователя");
+      return Validator.value(value).required();
     },
     "user.password": value => {
-      return Validator.value(value).required("Введите пароль");
+      return Validator.value(value).required();
     }
   },
   data() {

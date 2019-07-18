@@ -12,7 +12,7 @@
       .form__input-icon(
         :class="`form__input-icon_${icon}`"
       )
-      errors-tooltip(
+      errors(
         :errorText="errorText"
       )
 </template>
@@ -33,7 +33,7 @@ export default {
     }
   },
   components: {
-    errorsTooltip: () => import("./errors-tooltip.vue")
+    errors: () => import("./errors.vue")
   }
-}
+};
 </script>
