@@ -403,7 +403,6 @@ import { Validator } from "simple-vue-validator";
 import regeneratorRuntime from "regenerator-runtime";
 import axios from "axios";
 export default {
-  mixins: [require("simple-vue-validator").mixin],
   validators: {
     "user.name": value => {
       return Validator.value(value).required("Введите имя пользователя");
