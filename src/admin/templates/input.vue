@@ -24,16 +24,16 @@ export default {
     type: String,
     errorText: {
       type: String,
-      default: ""
+      default: ''
     },
     value: String | Number,
     icon: {
       type: String,
-      default: ""
+      default: ''
     }
   },
   components: {
-    errors: () => import("./errors.vue")
+    errors: () => import('./errors.vue')
   }
 };
 </script>

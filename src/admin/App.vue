@@ -399,33 +399,33 @@
 </template>
 
 <script>
-import { Validator } from "simple-vue-validator";
-import regeneratorRuntime from "regenerator-runtime";
-import axios from "axios";
+import { Validator } from 'simple-vue-validator';
+import regeneratorRuntime from 'regenerator-runtime';
+import axios from 'axios';
 export default {
   validators: {
-    "user.name": value => {
+    'user.name': value => {
       return Validator.value(value).required();
     },
-    "user.password": value => {
+    'user.password': value => {
       return Validator.value(value).required();
     }
   },
   data() {
     return {
       user: {
-        name: "",
-        password: ""
+        name: '',
+        password: ''
       }
     };
   },
   components: {
-    appInput: () => import("./templates/input")
+    appInput: () => import('./templates/input')
   },
   methods: {
     async sendForm() {
       const success = await this.$validate();
-      console.log("success", success);
+      console.log('success', success);
       if (success) {
         // send form
       }
@@ -437,17 +437,17 @@ export default {
 
 <style lang="pcss">
 /* base style */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
-@import "normalize.css";
-@import "../styles/mixins.pcss";
-@import "../styles/layout/base.pcss";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import 'normalize.css';
+@import '../styles/mixins.pcss';
+@import '../styles/layout/base.pcss';
 /* admin style */
-@import "../styles/admin/different.pcss";
-@import "../styles/admin/header.pcss";
-@import "../styles/admin/navigation.pcss";
-@import "../styles/admin/about.pcss";
-@import "../styles/admin/work.pcss";
-@import "../styles/admin/feedback.pcss";
-@import "../styles/admin/skills.pcss";
-@import "../styles/admin/login.pcss";
+@import '../styles/admin/different.pcss';
+@import '../styles/admin/header.pcss';
+@import '../styles/admin/navigation.pcss';
+@import '../styles/admin/about.pcss';
+@import '../styles/admin/work.pcss';
+@import '../styles/admin/feedback.pcss';
+@import '../styles/admin/skills.pcss';
+@import '../styles/admin/login.pcss';
 </style>
