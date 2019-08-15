@@ -1,16 +1,6 @@
 <template lang="pug">
   .wrap
-    .header
-      .container
-        .header__wrap
-          .header__info
-            .header__user
-              .header__avatar
-                img(src="../images/content/me.jpg").avatar
-              .header__username
-                span.username Евгений Нечетов
-            span.header__subtitle Панель администрирования
-          a(href="#").header__exit Выйти
+    app-header
     section.navigation
       .container
         .navigation__wrap
@@ -370,32 +360,32 @@
                   button.section__card-btn.section__card-delete
                     span Удалить
                     .delete
-    .overlay
-      .login
-        .login__wrap
-          .login__close
-            button.close
-          h1.login__title Авторизация
-          .login__form
-            form.form(@submit.prevent="sendForm")
-              app-input(
-                title="Логин"
-                icon="login"
-                type="text"
-                v-model="user.name"
-                :errorText="validation.firstError('user.name')"
-              )         
-              app-input(
-                title="Пароль"
-                icon="password"
-                type="password"
-                v-model="user.password"
-                :errorText="validation.firstError('user.password')"
-              )
-              .login__btn
-                input.btn.btn__login(
-                  type='submit'
-                )    
+    //- .overlay
+    //-   .login
+    //-     .login__wrap
+    //-       .login__close
+    //-         button.close
+    //-       h1.login__title Авторизация
+    //-       .login__form
+    //-         form.form(@submit.prevent="sendForm")
+    //-           app-input(
+    //-             title="Логин"
+    //-             icon="login"
+    //-             type="text"
+    //-             v-model="user.name"
+    //-             :errorText="validation.firstError('user.name')"
+    //-           )         
+    //-           app-input(
+    //-             title="Пароль"
+    //-             icon="password"
+    //-             type="password"
+    //-             v-model="user.password"
+    //-             :errorText="validation.firstError('user.password')"
+    //-           )
+    //-           .login__btn
+    //-             input.btn.btn__login(
+    //-               type='submit'
+    //-             )    
 </template>
 
 <script>
@@ -420,7 +410,8 @@ export default {
     };
   },
   components: {
-    appInput: () => import('./templates/input')
+    appInput: () => import('./templates/input'),
+    appHeader: () => import('./templates/header')
   },
   methods: {
     async sendForm() {
@@ -443,7 +434,6 @@ export default {
 @import '../styles/layout/base.pcss';
 /* admin style */
 @import '../styles/admin/different.pcss';
-@import '../styles/admin/header.pcss';
 @import '../styles/admin/navigation.pcss';
 @import '../styles/admin/about.pcss';
 @import '../styles/admin/work.pcss';
