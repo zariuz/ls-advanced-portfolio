@@ -1,9 +1,8 @@
-# Учебный шаблон проекта Portfolio
+# Проект Portfolio
 
-| ФИО                     | Нечетов Евгений Петрович                                 |
-| ----------------------- | -------------------------------------------------------- |
-| Номер домашнего задания | ДЗ 3                                                     |
-| Ссылка на репозиторий   | https://github.com/zariuz/ls-advanced-portfolio/tree/dz3 |
+| ФИО                     | Нечетов Евгений Петрович |
+| ----------------------- | ------------------------ |
+| Номер домашнего задания | ДЗ 3                     |
 
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же
 > [последняя версия Yarn](https://yarnpkg.com/ru/docs/install)
@@ -13,7 +12,7 @@
 ```sh
 $ git clone https://github.com/zariuz/ls-advanced-portfolio.git
 $ cd ls-advanced-portfolio
-$ yarn
+$ npm i или yarn
 ```
 
 ## Скрипты package.json:
