@@ -1,14 +1,7 @@
 <template lang="pug">
   .wrap
     app-header
-    section.navigation
-      .container
-        .navigation__wrap
-          nav.nav
-            ul.nav__list
-              li.nav__child.nav__child_active Обо мне
-              li.nav__child Работы
-              li.nav__child Отзывы
+    app-navigation
     main.main
       section.about
         .container
@@ -411,7 +404,8 @@ export default {
   },
   components: {
     appInput: () => import('./templates/input'),
-    appHeader: () => import('./templates/header')
+    appHeader: () => import('./templates/header'),
+    appNavigation: () => import('./templates/navigation')
   },
   methods: {
     async sendForm() {
@@ -434,7 +428,6 @@ export default {
 @import '../styles/layout/base.pcss';
 /* admin style */
 @import '../styles/admin/different.pcss';
-@import '../styles/admin/navigation.pcss';
 @import '../styles/admin/about.pcss';
 @import '../styles/admin/work.pcss';
 @import '../styles/admin/feedback.pcss';
