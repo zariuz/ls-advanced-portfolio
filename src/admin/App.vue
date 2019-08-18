@@ -353,68 +353,16 @@
                   button.section__card-btn.section__card-delete
                     span Удалить
                     .delete
-    //- .overlay
-    //-   .login
-    //-     .login__wrap
-    //-       .login__close
-    //-         button.close
-    //-       h1.login__title Авторизация
-    //-       .login__form
-    //-         form.form(@submit.prevent="sendForm")
-    //-           app-input(
-    //-             title="Логин"
-    //-             icon="login"
-    //-             type="text"
-    //-             v-model="user.name"
-    //-             :errorText="validation.firstError('user.name')"
-    //-           )         
-    //-           app-input(
-    //-             title="Пароль"
-    //-             icon="password"
-    //-             type="password"
-    //-             v-model="user.password"
-    //-             :errorText="validation.firstError('user.password')"
-    //-           )
-    //-           .login__btn
-    //-             input.btn.btn__login(
-    //-               type='submit'
-    //-             )    
+    app-overlay
 </template>
 
 <script>
-import { Validator } from 'simple-vue-validator';
-import regeneratorRuntime from 'regenerator-runtime';
-import axios from 'axios';
 export default {
-  validators: {
-    'user.name': value => {
-      return Validator.value(value).required();
-    },
-    'user.password': value => {
-      return Validator.value(value).required();
-    }
-  },
-  data() {
-    return {
-      user: {
-        name: '',
-        password: ''
-      }
-    };
-  },
   components: {
     appInput: () => import('./templates/input'),
     appHeader: () => import('./templates/header'),
-    appNavigation: () => import('./templates/navigation')
-  },
-  methods: {
-    async sendForm() {
-      const success = await this.$validate();
-      console.log('success', success);
-      if (success) {
-        // send form
-      }
-    }
+    appNavigation: () => import('./templates/navigation'),
+    appOverlay: () => import('./templates/overlay')
   }
 };
 </script>
