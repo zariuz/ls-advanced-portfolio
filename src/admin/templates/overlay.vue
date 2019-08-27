@@ -12,14 +12,12 @@
                 icon="login"
                 type="text"
                 v-model="user.name"
-                :errorText="validation.firstError('user.name')"
               )         
               app-input(
                 title="Пароль"
                 icon="password"
                 type="password"
                 v-model="user.password"
-                :errorText="validation.firstError('user.password')"
               )
               .login__btn
                 input.btn.btn__login(

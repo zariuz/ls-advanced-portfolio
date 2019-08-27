@@ -10,13 +10,5 @@
 </template>
 <style lang="pcss">
 @import '../../styles/mixins.pcss';
-.navigation {
-  color: $black-color;
-  &__wrap {
-    @include tablets {
-      width: 85%;
-      margin: 0 auto;
-    }
-  }
-}
+@import '../../styles/admin/navigation.pcss';
 </style>
