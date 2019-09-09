@@ -55,10 +55,11 @@ export default {
     }
   },
   components: {
-    appInput: () => import('./../templates/input')
+    appInput: () => import('./../../components/input')
   }
 };
 </script>
 <style lang="pcss">
-@import '../../styles/mixins.pcss';
+@import '../../../styles/mixins.pcss';
+@import '../../../styles/admin/login.pcss';
 </style>
