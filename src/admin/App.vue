@@ -3,9 +3,7 @@
     app-header
     app-navigation
     main.main
-      app-about
-      app-work
-      app-feedback
+      router-view
     app-login
 </template>
 
