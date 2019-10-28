@@ -1,0 +1,197 @@
+.footer {
+  padding: 103px 0 100px;
+  background: $footer-color;
+  @include desktopHd {
+    padding-top: 75px;
+  }
+  @include desktop {
+    padding-top: 56px;
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+  &__nav nav {
+    color: white;
+  }
+  &__left {
+    flex-basis: 28%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    @include desktopHd {
+      flex-basis: 26%;
+      flex-direction: column;
+    }
+    @include desktop {
+      flex-basis: 35%;
+    }
+    @include tablets {
+      flex-basis: 100%;
+    }
+  }
+  &__right {
+    flex-basis: 66%;
+    @include desktopHd {
+      flex-basis: 74%;
+    }
+    @include desktop {
+      flex-basis: 66%;
+    }
+    @include tablets {
+      flex-basis: 100%;
+      margin-top: 20px;
+    }
+  }
+  &__copyright {
+    margin-right: 60px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 45px;
+    opacity: 0.1;
+    color: $white-color;
+    @include desktopHd {
+      margin: 0;
+    }
+  }
+  &__author {
+    flex-basis: 43%;
+    @include desktopHd {
+      margin-top: 22px;
+    }
+    &-name {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 27px;
+      text-transform: uppercase;
+      color: $white-color;
+      @include desktopHd {
+        width: 70%;
+      }
+      @include tablets {
+        width: 100%;
+      }
+    }
+    &-project {
+      display: inline-block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      opacity: 0.15;
+      color: $white-color;
+      @include desktop {
+        margin-top: 15px;
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 53px;
+    @include desktopHd {
+      margin-top: 57px;
+    }
+    @include desktop {
+      margin-top: 50px;
+      flex-direction: column;
+    }
+    @include tablets {
+      margin-top: 41px;
+    }
+    &-project {
+      flex-basis: 48%;
+      line-height: 30px;
+      @include desktop {
+        &:not(:first-child) {
+          margin-top: 50px;
+        }
+      }
+      @include tablets {
+        &:not(:first-child) {
+          margin-top: 43px;
+        }
+      }
+    }
+    &-descr {
+      opacity: 0.3;
+      font-size: 16px;
+      font-weight: 400;
+      color: $white-color;
+      @include desktop {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+    &-social {
+      margin-top: 22px;
+      @include tablets {
+        margin-top: 15px;
+      }
+      .socials__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border: 1px solid #524c5d;
+        border-radius: 50%;
+      }
+      .socials__item:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+  &__quote {
+    font-size: 16px;
+    color: $white-color;
+    &-author {
+      margin-top: 18px;
+      font-style: italic;
+      opacity: 1;
+      color: $white-color;
+      @include desktop {
+        font-size: 14px;
+        margin-top: 6px;
+      }
+      @include tablets {
+        font-size: 14px;
+        margin-top: 18px;
+      }
+    }
+  }
+  &__nav {
+    .nav__list {
+      flex-wrap: wrap;
+    }
+    .nav__item {
+      @include desktop {
+        &:nth-child(4) {
+          margin: 0;
+        }
+        &:nth-child(n + 5) {
+          margin-top: 23px;
+        }
+      }
+      @include tablets {
+        flex-basis: 50%;
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+        &:nth-child(n + 5) {
+          margin-top: 0px;
+        }
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+        &:nth-child(n + 3) {
+          margin-top: 22px;
+        }
+      }
+    }
+  }
+}

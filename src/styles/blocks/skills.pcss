@@ -1,0 +1,114 @@
+.skills {
+  padding: 250px 0 150px 0;
+  position: relative;
+  z-index: 2;
+  @include desktopHd {
+    padding-top: 190px;
+    padding-bottom: 136px;
+  }
+  @include desktop {
+    padding-top: 155px;
+    padding-bottom: 100px;
+  }
+  @include tablets {
+    padding-top: 95px;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 30px;
+    color: $text-color;
+    @include desktop {
+      width: 88%;
+      margin-left: 9%;
+    }
+    @include tablets {
+      width: 100%;
+      margin-left: 0;
+      font-size: 24px;
+      line-height: 33px;
+    }
+  }
+  &__subtitle {
+    margin-top: 47px;
+    color: $text-color;
+    line-height: 30px;
+    @include desktopHd {
+      margin-top: 48px;
+    }
+    @include desktop {
+      margin-top: 5px;
+    }
+    @include tablets {
+      margin-top: 16px;
+      line-height: 25px;
+    }
+  }
+  &__top {
+    width: 40%;
+    margin-left: 34%;
+    @include desktopHd {
+      width: 51%;
+      margin-left: 26%;
+    }
+    @include desktop {
+      width: 65%;
+      margin-left: 16%;
+      text-align: center;
+    }
+    @include tablets {
+      width: 100%;
+      margin-left: 0;
+      text-align: left;
+    }
+  }
+  &__bottom {
+    display: flex;
+    margin-top: 84px;
+    margin-top: 84px;
+    @include desktop {
+      flex-direction: column;
+      margin-top: 35px;
+      text-align: center;
+    }
+    @include tablets {
+      margin-top: 45px;
+    }
+  }
+  &__img {
+    position: relative;
+    flex-basis: 40%;
+    @include desktop {
+      order: 1;
+      flex-basis: 100%;
+      margin-top: 56px;
+    }
+  }
+  &__metrics {
+    flex-basis: 40%;
+    margin-left: 30px;
+    @include desktopHd {
+      flex-basis: 66%;
+    }
+    @include desktop {
+      order: -1;
+      flex-basis: 100%;
+    }
+  }
+  &__backpack {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    max-height: 120%;
+    max-width: 120%;
+    z-index: -1;
+    @include desktopHd {
+      flex-basis: 66%;
+    }
+    @include desktop {
+      order: -1;
+      flex-basis: 100%;
+    }
+  }
+}
