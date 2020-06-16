@@ -1,5 +1,5 @@
 .main-section
-  header.header
+  header.header#0
     .container
       .header__wrap.fullscreen-section
         .header__top
@@ -17,11 +17,11 @@
           h1.header__title Евгений <br> Нечетов
           span.header__subtitle Личный сайт <br> веб-разработчика
         .header__bottom
-          button.header__button
+          a(href="#5").header__button
             span.header__prompt Скролл
             +icon('scroll','header__scroll')
   
-  section.about
+  section.about#1
     .container
       .about__wrap
         .about__grid
@@ -36,7 +36,7 @@
               -
                 var info = [
                   ['Проживаю:','Санкт-Петербург'],
-                  ['Возраст:','37'],
+                  ['Возраст:','38'],
                   ['Родился:','24 сентября 1981']
                 ]
               each row in info
